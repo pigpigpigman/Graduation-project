@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.NiandubangdanDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.NiandubangdanEntity" id="niandubangdanMap">
+        <result property="nianfen" column="nianfen"/>
+        <result property="bofangliang" column="bofangliang"/>
+        <result property="songname" column="songname"/>
+        <result property="gequmingcheng" column="gequmingcheng"/>
+        <result property="singer" column="singer"/>
+        <result property="yinlefenlei" column="yinlefenlei"/>
+        <result property="fengmian" column="fengmian"/>
+        <result property="songfile" column="songfile"/>
+        <result property="zhuanjimingcheng" column="zhuanjimingcheng"/>
+        <result property="faxingriqi" column="faxingriqi"/>
+        <result property="geci" column="geci"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.NiandubangdanVO" >
+		SELECT * FROM niandubangdan  niandubangdan         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.NiandubangdanVO" >
+		SELECT  niandubangdan.* FROM niandubangdan  niandubangdan
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.NiandubangdanView" >
+
+		SELECT  niandubangdan.* FROM niandubangdan  niandubangdan 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.NiandubangdanView" >
+		SELECT * FROM niandubangdan  niandubangdan <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+	
+</mapper>
