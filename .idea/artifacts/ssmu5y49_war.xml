@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ssmu5y49:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ssmu5y49</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ssmu5y49.war">
+      <element id="artifact" artifact-name="ssmu5y49:war exploded" />
+    </root>
+  </artifact>
+</component>
